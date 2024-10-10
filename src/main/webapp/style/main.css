@@ -1,0 +1,34 @@
+table, th, td {
+    border: 2px solid #021e02;
+    border-collapse: collapse;
+}
+td, th {
+    font-size: large;
+    font-style: italic;
+    border: solid;
+    color: black;
+    padding: 8px;
+}
+/* Set the width for the column Description */
+th:nth-child(2), td:nth-child(2) {
+    width: 300px;
+}
+thead {
+    background-color: #466a46;
+}
+
+tbody tr {
+    background-color: lightgreen;
+}
+
+.active_page{
+    color: darkred;
+}
+.button_page {
+    color: #466a46;
+    border: 2px solid #021e02;
+    margin: 5px;
+    padding: 20px;
+    font-size: large;
+    font-style: italic;
+}
