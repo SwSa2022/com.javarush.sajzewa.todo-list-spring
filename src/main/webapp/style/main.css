@@ -5,7 +5,7 @@ table, th, td {
 td, th {
     font-size: large;
     font-style: italic;
-    border: solid;
+    /*border: solid;*/
     color: black;
     padding: 8px;
 }
@@ -32,3 +32,4 @@ tbody tr {
     font-size: large;
     font-style: italic;
 }
+

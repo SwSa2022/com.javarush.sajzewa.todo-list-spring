@@ -35,7 +35,7 @@ public class AppConfig {
     }
 
     @Bean
-    protected DataSource dataSource() {
+    public DataSource dataSource() {
         HikariDataSource dataSource = new HikariDataSource();
         dataSource.setDriverClassName("com.p6spy.engine.spy.P6SpyDriver"); // logging requests
         dataSource.setJdbcUrl("jdbc:p6spy:mysql://localhost:3306/todo");
@@ -46,9 +46,9 @@ public class AppConfig {
     }
 
     @Bean
-    public PlatformTransactionManager transactionManager(EntityManagerFactory entityManagerFactory) {
+    public PlatformTransactionManager transactionManager(EntityManagerFactory factory) {
         JpaTransactionManager transactionManager = new JpaTransactionManager();
-        transactionManager.setEntityManagerFactory(entityManagerFactory);
+        transactionManager.setEntityManagerFactory(factory);
         return transactionManager;
     }
 }

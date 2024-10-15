@@ -10,6 +10,7 @@ import java.util.List;
 
 import static java.util.Objects.isNull;
 
+
 @Service
 public class TaskService {
     private final TaskDAO taskDAO;
@@ -17,12 +18,15 @@ public class TaskService {
     public TaskService(TaskDAO taskDAO) {
         this.taskDAO = taskDAO;
     }
+
     public List<Task> getAll(int offset, int limit) {
         return taskDAO.getAll(offset, limit);
     }
+
     public  int getAllCount(){
         return taskDAO.getAllCount();
     }
+
 
     @Transactional
     public Task edit(int id, String description, Status status) {

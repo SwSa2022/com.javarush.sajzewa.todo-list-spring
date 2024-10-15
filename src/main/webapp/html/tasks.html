@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>tasks</title>
-    <link href="style/main.css" rel="stylesheet">
-    <script src="script/jquery.js"></script>
-    <script src="script/my.js"></script>
+    <link th:href="@{style/main.css}" rel="stylesheet">
+    <script th:src="@{/script/jquery.js}"></script>
+    <script th:src="@{/script/my.js}"></script>
 </head>
 <body>
     <table>
@@ -22,11 +22,36 @@
             <td th:text="${task.id}"></td>
             <td th:text="${task.description}" th:id="'description_' + ${task.id}"></td>
             <td th:text="${task.status}" th:id="'status_' + ${task.id}"></td>
+
             <td>
-                <button th:id="'edit_' + ${task.id}" th:onClick="'edit_task(' +${task.id} +')'">Edit</button>
+                <button th:id="'edit_' + ${task.id}" th:onclick="'edit_task(' + ${task.id} + ')'">Edit</button>
             </td>
             <td>
-                <button th:id="'delete_' + ${task.id}" th:onClick="'delete_task(' +${task.id} +')'">Delete</button>
+               <button th:id="'delete_' + ${task.id}" th:onclick="'delete_task(' + ${task.id} + ')'">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5" class="text_bold">
+                Add new task:
+            </td>
+        </tr>
+
+        <tr>
+            <td>-</td>
+            <td>
+                <label for="description_new"></label>
+                <input id="description_new" type="text" value=''>
+            </td>
+            <td>
+                <label for="status_new"></label>
+                <select id="status_new">
+                    <option value='IN_PROGRESS'>IN PROGRESS</option>
+                    <option value='DONE'>DONE</option>
+                    <option value='PAUSED'>PAUSED</option>
+                </select>
+            </td>
+            <td colspan="2" style="text-align: center;">
+                <button id='save_new' onclick='add_task()' style="display: inline-block; width: 80px; padding: 5px 10px;">Save</button>
             </td>
         </tr>
         </tbody>
