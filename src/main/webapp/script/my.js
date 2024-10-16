@@ -63,7 +63,7 @@ function update_task(task_id) {
     $.ajax({
         url: url,
         type: 'POST',
-        // dataType: 'json',
+        dataType: 'json',
         contentType: 'application/json;charset=UTF-8',
         async: false,
         data: JSON.stringify({"description" : value_description, "status": value_status}),
