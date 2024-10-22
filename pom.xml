@@ -78,46 +78,5 @@
             <artifactId>jackson-databind</artifactId>
             <version>2.14.1</version>
         </dependency>
-
-
-<!--            &lt;!&ndash; JUnit &ndash;&gt;-->
-<!--            <dependency>-->
-<!--                <groupId>org.junit.jupiter</groupId>-->
-<!--                <artifactId>junit-jupiter-api</artifactId>-->
-<!--                <version>5.9.3</version>-->
-<!--                <scope>test</scope>-->
-<!--            </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>org.junit.jupiter</groupId>-->
-<!--            <artifactId>junit-jupiter-engine</artifactId>-->
-<!--            <version>5.9.3</version> &lt;!&ndash; Use the latest stable version &ndash;&gt;-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>org.junit.platform</groupId>-->
-<!--            <artifactId>junit-platform-launcher</artifactId>-->
-<!--            <version>1.10.1</version> &lt;!&ndash; Use the latest stable version &ndash;&gt;-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
-
-
-<!--        &lt;!&ndash; Mockito &ndash;&gt;-->
-<!--            <dependency>-->
-<!--                <groupId>org.mockito</groupId>-->
-<!--                <artifactId>mockito-core</artifactId>-->
-<!--                <version>3.7.7</version>-->
-<!--                <scope>test</scope>-->
-<!--            </dependency>-->
-
-<!--            &lt;!&ndash; Spring Test &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-test</artifactId>-->
-<!--            <version>3.2.5</version> &lt;!&ndash; or the latest stable version &ndash;&gt;-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
-
     </dependencies>
-
-
 </project>

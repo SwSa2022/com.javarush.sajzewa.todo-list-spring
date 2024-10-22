@@ -1,27 +1,35 @@
 version: "3.9"
 
 services:
-    server:
-        build: /
-        ports:
-            - '8080:8080'
-        depends_on:
-            db:
-                condition: service_healthy
+  server:
+    build: /
+    ports:
+      - '8080:8080'
+    depends_on:
+      db:
+        condition: service_healthy
 
-    db:
-        image: mysql:8.0.32
-        environment:
-            MYSQL_ROOT_PASSWORD: 'root'
-        ports:
-            - 3306:3306
-        volumes:
-            - my-db:/var/lib/mysql
-        healthcheck:
-            test: "/usr/bin/mysql --user=root --password=root --execute \"SHOW DATABASES;\""
-            interval: 2s
-            timeout: 30s
-            retries: 10
+  db:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: 'root'
+    ports:
+      - '3306:3306'
+    volumes:
+      - my-db:/var/lib/mysql
+    healthcheck:
+      test: "mysqladmin ping -h localhost --password=root"
+      interval: 10s
+      timeout: 30s
+      retries: 5
+      start_period: 60s
+
+#    healthcheck:
+#      test: "/usr/bin/mysql --user=root --password=root --execute \"SHOW DATABASES;\""
+#      interval: 10s
+#      timeout: 30s
+#      retries: 5
+#      start_period: 30s
 
 volumes:
-    my-db:
+  my-db:
